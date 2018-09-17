@@ -1,10 +1,11 @@
 # TurtleChalangeTest
-This code was written using C# .Net Core as a part of a job application in a company that I really like to work for.
+This code was written as a part of a job application in a company that I really like to work for.
+- The solution was created using **C#** and **Visual Studio 2017 Community**.
 
 ## The solution has three projects:  
-- **TurtleChalangeTest.Tests** - Where unit tests were written to validate the result of actions
-- **TurtleChalangeTest.Library** - Where are the classed template and business rules for the game
-- **TurtleChalangeTest** - console application where game outputs are displayed
+- **TurtleChalangeTest.Tests** - xUnit Test Project (.Net Core)
+- **TurtleChalangeTest.Library** - Class Library (.Net Core)
+- **TurtleChalangeTest** -  Console App (.Net Core)
 ### Dependencies ###
 Only the **Newtonsoft.Json** package was used and should be downloaded in the project library.
 

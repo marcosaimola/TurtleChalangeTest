@@ -1,0 +1,34 @@
+﻿{
+  "Board": {
+    "sizeX": 5,
+    "sizeY": 4
+  },
+
+  "Turtle": {
+    "startPosX": 0,
+    "startPosY": 1,
+    "startDirection": "north"
+  },
+
+  "ExitPoint": {
+    "posX": 4,
+    "posY": 2
+  },
+
+  "Mines": 
+    [
+      {
+        "posX": 1,
+        "posY": 1
+      },
+      {
+        "posX": 3,
+        "posY": 1
+      },
+      {
+        "posX": 3,
+        "posY": 3
+      }
+    ]
+}
+

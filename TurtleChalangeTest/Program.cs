@@ -1,8 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
-using Newtonsoft.Json;
 using TurtleChallengeTest.Library;
 using Action = TurtleChallengeTest.Library.Action;
 
@@ -10,15 +9,12 @@ namespace TurtleChallengeTest.View
 {
     public class Program
     {
-        const string ConfigFile = "game-settings";
-        const string ActionsFile = "moves";
-
-        public static Configuration Conf = new Configuration();
+        public static Library.Configuration Conf = new Library.Configuration();
         public static List<Action> Actions = new List<Action>();
         
         static void Main(string[] args)
         {
-            ReadFiles(ref Conf,ref Actions);
+            ReadFiles();
             
             try
             {
@@ -34,25 +30,29 @@ namespace TurtleChallengeTest.View
             }  
         }
 
-        static void ReadFiles(ref Configuration configuration, ref List<Action> actions)
+        static void ReadFiles()
         {
+
+            string ConfigFile = "game-settings.json";
+            string ActionsFile = "moves.json";
+
             try
             {
-                using (StreamReader r = new StreamReader(ConfigFile + ".json"))
+                using (StreamReader r = new StreamReader(ConfigFile))
                 {
                     var json = r.ReadToEnd();
-                    configuration = JsonConvert.DeserializeObject<Configuration>(json);
+                    Conf = JsonConvert.DeserializeObject<Library.Configuration>(json);
                 }
 
-                using (StreamReader r = new StreamReader(ActionsFile + ".json"))
+                using (StreamReader r = new StreamReader(ActionsFile))
                 {
                     var json = r.ReadToEnd();
-                    actions = JsonConvert.DeserializeObject<List<Action>>(json);
+                    Actions = JsonConvert.DeserializeObject<List<Action>>(json);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Console.WriteLine(ex.Message);
             }
         }
 

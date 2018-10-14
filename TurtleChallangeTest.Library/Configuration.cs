@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace TurtleChallengeTest.Library
 {
@@ -8,7 +6,7 @@ namespace TurtleChallengeTest.Library
     {
         public Board Board { get; set; }
         public Turtle Turtle { get; set; }
-        public ExitPoint ExitPoint { get; set; }
-        public List<Mine> Mines { get; set; }
+        public BoardPosition ExitPoint { get; set; }
+        public List<BoardPosition> Mines { get; set; }
     }
 }

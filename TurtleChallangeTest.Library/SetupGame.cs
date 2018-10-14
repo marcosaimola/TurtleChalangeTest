@@ -65,8 +65,6 @@ namespace TurtleChallengeTest.Library
 
             var outputAction = "";
 
-            var i = 0;
-
             var turns = new List<Turn>();
             
             foreach (var action in Actions)

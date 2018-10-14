@@ -6,8 +6,6 @@ namespace TurtleChallengeTest.Library
 {
     public class Turn
     {
-        public int X { get; set; }
-        public int Y { get; set; }
         public Action Action { get; set; }
         public ActionResult ActionResult { get; set; }
         public string Result { get; set; }

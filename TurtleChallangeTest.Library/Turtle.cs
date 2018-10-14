@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TurtleChallengeTest.Library
+﻿namespace TurtleChallengeTest.Library
 {
     public class Turtle : ITurtle
     {

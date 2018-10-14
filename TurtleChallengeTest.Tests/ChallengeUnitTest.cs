@@ -12,20 +12,20 @@ namespace TurtleChallengeTest.Tests
         // Arrange
         public static int boardX = 5;
         public static int boardY = 4;
-        public static ExitPoint exit = new ExitPoint() { PosX = 4, PosY = 2 };
-        public static List<Mine> mines = new List<Mine>()
+        public static BoardPosition exit = new BoardPosition() { PosX = 4, PosY = 2 };
+        public static List<BoardPosition> mines = new List<BoardPosition>()
         {
-            new Mine()
+            new BoardPosition()
             {
                 PosX = 1,
                 PosY = 1
             },
-            new Mine()
+            new BoardPosition()
             {
                 PosX = 3,
                 PosY = 1
             },
-            new Mine()
+            new BoardPosition()
             {
                 PosX = 3,
                 PosY = 3

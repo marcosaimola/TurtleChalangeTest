@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace TurtleChallengeTest.Library
 {
@@ -11,11 +9,9 @@ namespace TurtleChallengeTest.Library
         public int SizeX { get; set; }
 
         public Board()
-        {
+        { }
 
-        }
-
-        public Board(int sizeX, int sizeY, List<Mine> mines, ExitPoint exit)
+        public Board(int sizeX, int sizeY, List<BoardPosition> mines, BoardPosition exit)
         {
             SizeX = sizeX;
             SizeY = sizeY;

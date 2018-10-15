@@ -63,7 +63,8 @@ namespace TurtleChallengeTest.Tests
             ActionResult expectedResult = ActionResult.MineExploded;
 
             // Act
-            var turns = SetupGame.Play(config, actions);
+            var play = new PlayGame(config, actions);
+            var turns = play.Play();
 
             // Assert
             var actionResult = turns.Last().ActionResult;
@@ -85,7 +86,8 @@ namespace TurtleChallengeTest.Tests
             };
             ActionResult expectedResult = ActionResult.HitTheWall;
 
-            var turns = SetupGame.Play(config, actions);
+            var play = new PlayGame(config, actions);
+            var turns = play.Play();
 
             var actionResult = turns.Last().ActionResult;
             Assert.Equal(expectedResult, actionResult);
@@ -108,8 +110,8 @@ namespace TurtleChallengeTest.Tests
             };
 
             ActionResult expectedResult = ActionResult.ExitFound;
-
-            var turns = SetupGame.Play(config, actions);
+            var play = new PlayGame(config, actions);
+            var turns = play.Play();
 
             var actionResult = turns.Last().ActionResult;
             Assert.Equal(expectedResult, actionResult);
@@ -133,7 +135,8 @@ namespace TurtleChallengeTest.Tests
 
             try
             {
-                SetupGame.ValidateBoard(config, actions);
+                var setup = new SetupGame(config, actions);
+                setup.ValidateBoard();
             }
             catch (Exception e)
             {

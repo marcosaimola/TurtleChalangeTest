@@ -11,14 +11,19 @@ namespace TurtleChallengeTest.View
     {
         public static Library.Configuration Conf = new Library.Configuration();
         public static List<Action> Actions = new List<Action>();
-        
+        public static SetupGame setup;
+        public static PlayGame play;
+
         static void Main(string[] args)
         {
             ReadFiles();
             
             try
             {
-                Conf.Board = SetupGame.ValidateBoard(Conf, Actions);
+                setup = new SetupGame(Conf,Actions);
+                play = new PlayGame(Conf, Actions);
+
+                Conf.Board = setup.ValidateBoard();
                 PlayGame();
             }
             catch (Exception e)
@@ -59,7 +64,7 @@ namespace TurtleChallengeTest.View
         static void PlayGame()
         {
 
-            var turns = SetupGame.Play(Conf, Actions);
+            var turns = play.Play();
             var error = false;
 
             var i = 0;

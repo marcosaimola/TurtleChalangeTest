@@ -28,8 +28,7 @@ namespace TurtleChallengeTest.Library
             StartPosX = _conf.Turtle.StartPosX;
             StartPosY = _conf.Turtle.StartPosY;
         }
-
-
+        
         public Board ValidateBoard()
         {
         

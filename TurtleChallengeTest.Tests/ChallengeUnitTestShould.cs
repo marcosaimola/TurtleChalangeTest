@@ -7,7 +7,7 @@ using Action = System.Action;
 
 namespace TurtleChallengeTest.Tests
 {
-    public class ChallengeUnitTest
+    public class ChallengeUnitTestShould
     {
         // Arrange
         public static int boardX = 5;
@@ -47,7 +47,7 @@ namespace TurtleChallengeTest.Tests
         };
 
         [Fact]
-        public void Test_Mine_Path()
+        public void TheLittleTurtleShoudExplode()
         {
             // Arrange
             List<Library.Action> actions = new List<Library.Action>()
@@ -72,7 +72,7 @@ namespace TurtleChallengeTest.Tests
         }
 
         [Fact]
-        public void Test_Lost_Path()
+        public void TheLittleTurtleShoudGetLost()
         {
             List<Library.Action> actions = new List<Library.Action>()
             {
@@ -94,7 +94,7 @@ namespace TurtleChallengeTest.Tests
         }
 
         [Fact]
-        public void Test_Exit_Path()
+        public void TheLittleTurtleShouldFindTheExit()
         {
             List<Library.Action> actions = new List<Library.Action>()
             {
